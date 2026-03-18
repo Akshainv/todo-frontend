@@ -8,6 +8,8 @@ const API_URL = import.meta.env.VITE_API_URL ||
     ? 'http://localhost:5000/api/todos' 
     : 'https://todo-backend-3zzn.onrender.com/api/todos');
 
+console.log('Task API Initialized with URL:', API_URL);
+
 // Helper to get or create a guest token
 const getGuestToken = () => {
   let token = localStorage.getItem('todo_guest_token');
