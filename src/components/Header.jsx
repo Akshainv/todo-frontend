@@ -35,6 +35,15 @@ export default function Header({ onMenuClick }) {
             value={searchQuery}
             onChange={handleSearchChange}
           />
+          {searchQuery && (
+            <button 
+              className="header__search-clear" 
+              onClick={() => setSearchQuery('')}
+              aria-label="Clear search"
+            >
+              ×
+            </button>
+          )}
         </div>
       </div>
     </header>

@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const TodoContext = createContext();
 
 const API_URL = import.meta.env.VITE_API_URL || 
-  (import.meta.env.DEV 
+  (typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
     ? 'http://localhost:5000/api/todos' 
     : 'https://todo-backend-3zzn.onrender.com/api/todos');
 
