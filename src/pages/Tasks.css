@@ -290,20 +290,22 @@
 
 /* Delete Confirmation Toast */
 .delete-confirm-toast {
-  padding: var(--space-xs) 0;
+  padding: var(--space-sm) 0;
+  text-align: center;
 }
 
 .delete-confirm-toast p {
-  margin: 0 0 var(--space-md) 0;
-  font-weight: 600;
+  margin: 0 0 var(--space-lg) 0;
+  font-weight: 700;
   color: var(--color-text);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-md);
+  line-height: 1.4;
 }
 
 .delete-confirm-actions {
   display: flex;
-  gap: var(--space-sm);
-  justify-content: flex-end;
+  gap: var(--space-md);
+  justify-content: center;
 }
 
 .delete-confirm-actions button {

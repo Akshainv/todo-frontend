@@ -76,13 +76,15 @@ export default function Tasks() {
       <DeleteConfirm 
         onConfirm={() => deleteTodo(id)} 
         onCancel={() => {}} 
+        closeToast={() => toast.dismiss()} // Pass a function to dismiss the toast
       />,
       {
         position: "top-center",
         autoClose: false,
         closeOnClick: false,
         draggable: false,
-        closeButton: false
+        closeButton: false,
+        icon: false
       }
     );
   };
