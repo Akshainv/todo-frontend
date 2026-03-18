@@ -3,7 +3,10 @@ import { toast } from 'react-toastify';
 
 const TodoContext = createContext();
 
-const API_URL = 'http://localhost:5000/api/todos';
+const API_URL = import.meta.env.VITE_API_URL || 
+  (import.meta.env.DEV 
+    ? 'http://localhost:5000/api/todos' 
+    : 'https://todo-backend-3zzn.onrender.com/api/todos');
 
 // Helper to get or create a guest token
 const getGuestToken = () => {
